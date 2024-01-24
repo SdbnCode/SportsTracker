@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basketball Team Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="javascript.js"></script>
+</head>
+<body>
+
+  <h1>Basketball Team Tracker</h1>
+
+  <form id="playerForm">
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" required>
+    
+    <label for="playerPosition">Position:</label>
+    <input type="text" id="playerPosition" required>
+
+    <button type="button" onclick="addPlayer()">Add Player</button>
+  </form>
+
+  <h2>Team Roster</h2>
+
+  <ul id="playerList"></ul>
+
+  
+</body>
+</html>

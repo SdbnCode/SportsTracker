@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basketball Team Tracker</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="javascript.js"></script>
-</head>
+  <script src="javascript.js"></script> 
+  
+  <head>
 <body>
 
   <h1>Basketball Team Tracker</h1>
@@ -25,6 +26,24 @@
 
   <ul id="playerList"></ul>
 
-  
+  <hr>
+
+  <h2>Create a Game</h2>
+
+  <form id="gameForm">
+    <label for="gameName">Game Name:</label>
+    <input type="text" id="gameName" required>
+
+    <label for="selectedPlayers">Select Players:</label>
+    <select id="selectedPlayers" multiple required></select>
+
+    <button type="button" onclick="createGame()">Create Game</button>
+  </form>
+
+  <h2>Game Schedule</h2>
+
+  <ul id="gameList"></ul>
+
+
 </body>
 </html>

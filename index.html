@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basketball Team Tracker</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="javascript.js"></script> 
-  
-  <head>
+  <script src="javascript.js"></script>
+</head>
 <body>
 
   <h1>Basketball Team Tracker</h1>
@@ -44,6 +43,34 @@
 
   <ul id="gameList"></ul>
 
+  <hr>
+
+  <h2>Record Player Stats</h2>
+
+  <form id="statsForm">
+    <label for="statPlayer">Player:</label>
+    <select id="statPlayer" required></select>
+
+    <label for="statGame">Game:</label>
+    <select id="statGame" required></select>
+
+    <label for="statType">Stat Type:</label>
+    <select id="statType" required>
+      <option value="points">Points</option>
+      <option value="assists">Assists</option>
+      <option value="rebounds">Rebounds</option>
+      <option value="blocks">Blocks</option>
+      <option value="steals">Steals</option>
+      <option value="freeThrows">Free Throws</option>
+      <option value="twoPointers">2 Pointers</option>
+      <option value="threePointers">3 Pointers</option>
+    </select>
+
+    <label for="statValue">Stat Value:</label>
+    <input type="number" id="statValue" required>
+
+    <button type="button" onclick="recordStats()">Record Stats</button>
+  </form>
 
 </body>
 </html>

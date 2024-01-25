@@ -1,12 +1,12 @@
 // JavaScript code goes here
 
-var players = []; // Array to store players
-var games = []; // Array to store games
+const players = []; // Array to store players
+const games = []; // Array to store games
 
 function addPlayer() {
   // Get input values
-  var playerName = document.getElementById("playerName").value;
-  var playerPosition = document.getElementById("playerPosition").value;
+  const playerName = document.getElementById("playerName").value;
+  const playerPosition = document.getElementById("playerPosition").value;
 
   // Validate input
   if (!playerName || !playerPosition) {
@@ -15,7 +15,7 @@ function addPlayer() {
   }
 
   // Create player object with initial stats
-  var player = {
+  const player = {
     name: playerName,
     position: playerPosition,
     stats: {
@@ -41,12 +41,12 @@ function addPlayer() {
 }
 
 function updatePlayerList() {
-  var playerList = document.getElementById("playerList");
+  let playerList = document.getElementById("playerList");
   playerList.innerHTML = ""; // Clear existing list
 
   // Populate the player list
   players.forEach(function(player) {
-    var listItem = document.createElement("li");
+    let listItem = document.createElement("li");
     listItem.textContent = `${player.name} - ${player.position}`;
     playerList.appendChild(listItem);
   });
@@ -56,20 +56,20 @@ function updatePlayerList() {
 }
 
 function updatePlayerDropdown() {
-  var selectedPlayersDropdown = document.getElementById("selectedPlayers");
+  let selectedPlayersDropdown = document.getElementById("selectedPlayers");
   selectedPlayersDropdown.innerHTML = ""; // Clear existing dropdown options
 
-  var statPlayerDropdown = document.getElementById("statPlayer");
+  let statPlayerDropdown = document.getElementById("statPlayer");
   statPlayerDropdown.innerHTML = ""; // Clear existing dropdown options
 
   // Populate the dropdowns with players
   players.forEach(function(player) {
-    var optionSelectedPlayers = document.createElement("option");
+    let optionSelectedPlayers = document.createElement("option");
     optionSelectedPlayers.value = player.name;
     optionSelectedPlayers.textContent = player.name;
     selectedPlayersDropdown.appendChild(optionSelectedPlayers);
 
-    var optionStatPlayer = document.createElement("option");
+    let optionStatPlayer = document.createElement("option");
     optionStatPlayer.value = player.name;
     optionStatPlayer.textContent = player.name;
     statPlayerDropdown.appendChild(optionStatPlayer);
@@ -79,9 +79,9 @@ function updatePlayerDropdown() {
 
 function createGame() {
   // Get input values
-  var gameName = document.getElementById("gameName").value;
-  var selectedPlayersDropdown = document.getElementById("selectedPlayers");
-  var selectedPlayers = [];
+  let gameName = document.getElementById("gameName").value;
+  let selectedPlayersDropdown = document.getElementById("selectedPlayers");
+  let selectedPlayers = [];
 
   // Validate input
   if (!gameName || selectedPlayersDropdown.selectedOptions.length === 0) {
@@ -90,11 +90,11 @@ function createGame() {
   }
 
   // Get selected players
-  for (var i = 0; i < selectedPlayersDropdown.selectedOptions.length; i++) {
-    var playerName = selectedPlayersDropdown.selectedOptions[i].value;
+  for (let i = 0; i < selectedPlayersDropdown.selectedOptions.length; i++) {
+    let playerName = selectedPlayersDropdown.selectedOptions[i].value;
 
     // Find the player by name in the players array
-    var player = players.find(function (p) {
+    let player = players.find(function (p) {
       return p.name === playerName;
     });
 
@@ -103,7 +103,7 @@ function createGame() {
   }
 
   // Create game object
-  var game = {
+  let game = {
     name: gameName,
     players: selectedPlayers
   };
@@ -123,12 +123,12 @@ function createGame() {
 
 
 function updateGameList() {
-  var gameList = document.getElementById("gameList");
+  let gameList = document.getElementById("gameList");
   gameList.innerHTML = ""; // Clear existing list
 
   // Populate the game list
   games.forEach(function(game) {
-    var listItem = document.createElement("li");
+    let listItem = document.createElement("li");
     listItem.textContent = `${game.name} - Players: ${game.players.map(function(player) {
       return player.name;
     }).join(", ")}`;
@@ -138,12 +138,12 @@ function updateGameList() {
 
 
 function updateGameDropdown() {
-  var statGameDropdown = document.getElementById("statGame");
+  let statGameDropdown = document.getElementById("statGame");
   statGameDropdown.innerHTML = ""; // Clear existing dropdown options
 
   // Populate the dropdown with games
   games.forEach(function(game) {
-    var option = document.createElement("option");
+    let option = document.createElement("option");
     option.value = game.name;
     option.textContent = game.name;
     statGameDropdown.appendChild(option);
@@ -152,18 +152,18 @@ function updateGameDropdown() {
 
 // Function to record stats for a player during a game
 function recordStats() {
-  var playerName = document.getElementById("statPlayer").value;
-  var selectedGame = document.getElementById("statGame").value;
-  var selectedStat = document.getElementById("statType").value;
-  var statValue = parseInt(document.getElementById("statValue").value);
+  let playerName = document.getElementById("statPlayer").value;
+  let selectedGame = document.getElementById("statGame").value;
+  let selectedStat = document.getElementById("statType").value;
+  let statValue = parseInt(document.getElementById("statValue").value);
 
   // Find the game by name in the games array
-  var game = games.find(function(g) {
+  let game = games.find(function(g) {
     return g.name === selectedGame;
   });
 
   // Find the player by name in the players array within the selected game
-  var player = game.players.find(function(p) {
+  let player = game.players.find(function(p) {
     return p.name === playerName;
   });
 
@@ -182,6 +182,3 @@ function recordStats() {
 // Initial update of player list and game list
 updatePlayerList();
 updateGameList();
-
-
-

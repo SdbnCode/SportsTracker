@@ -4,73 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basketball Team Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Basketball Team Tracker</h1>
+  <h1>Team Tracker</h1>
 
-  <form id="playerForm">
-    <label for="playerName">Player Name:</label>
-    <input type="text" id="playerName" required>
+  <form>
+    <fieldset  id="playerform">
+      <legend>Add a Player</legend>
     
+    <div id = "name">
+      <label for="playerName">Player Name:</label>
+      <input type="text" id="playerFirstName" required placeholder="First Name">
+      <input type="text" id="playerLastName" required placeholder="Last Name">
+    </div>
+
     <label for="playerPosition">Position:</label>
     <input type="text" id="playerPosition" required>
 
-    <button type="button" onclick="addPlayer()">Add Player</button>
-  </form>
-
-  <h2>Team Roster</h2>
-
-  <ul id="playerList"></ul>
-
-  <hr>
-
-  <h2>Create a Game</h2>
-
-  <form id="gameForm">
-    <label for="gameName">Game Name:</label>
-    <input type="text" id="gameName" required>
-
-    <label for="selectedPlayers">Select Players:</label>
-    <select id="selectedPlayers" multiple required></select>
-
-    <button type="button" onclick="createGame()">Create Game</button>
-  </form>
-
-  <h2>Game Schedule</h2>
-
-  <ul id="gameList"></ul>
-
-  <hr>
-
-  <h2>Record Player Stats</h2>
-
-  <form id="statsForm">
-    <label for="statPlayer">Player:</label>
-    <select id="statPlayer" required></select>
-
     <label for="statGame">Game:</label>
-    <select id="statGame" required></select>
+    <input type="text" id="text" required>
 
-    <label for="statType">Stat Type:</label>
-    <select id="statType" required>
-      <option value="points">Points</option>
-      <option value="assists">Assists</option>
-      <option value="rebounds">Rebounds</option>
-      <option value="blocks">Blocks</option>
-      <option value="steals">Steals</option>
-      <option value="freeThrows">Free Throws</option>
-      <option value="twoPointers">2 Pointers</option>
-      <option value="threePointers">3 Pointers</option>
-    </select>
+    <label for="points">Points:</label>
+    <input type="text" id="points" required>
 
-    <label for="statValue">Stat Value:</label>
-    <input type="number" id="statValue" required>
+    <label for="assists">Assists:</label>
+    <input type="text" id="assists" required>
 
-    <button type="button" onclick="recordStats()">Record Stats</button>
+    <label for="rebounds">Rebounds:</label>
+    <input type="text" id="rebounds" required>
+
+    <label for="blocks">Blocks:</label>
+    <input type="text" id="blocks" required>
+
+    <label for="steals">Steals:</label>
+    <input type="text" id="steals" required>
+
+    <label for="freeThrows">Free Throws:</label>
+    <input type="text" id="freeThrows" required>
+
+    <label for="twoPointers">Two Pointers:</label>
+    <input type="text" id="twoPointers" required>
+    
+    <label for="threePointers">Three Pointers:</label>
+    <input type="text" id="threePointers" required>
+
+    <button type="button" onclick="addPlayer()">Add Player</button>
+    <p id="error-message"></p>
+    </fieldset>
   </form>
-  
-  <script src="javascript.js"></script>
+<hr>
+  <script src="player.js"></script>
 </body>
 </html>

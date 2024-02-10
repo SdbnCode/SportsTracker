@@ -1,14 +1,31 @@
-// JavaScript code goes here
-
-const players = []; // Array to store players
+const playerList = [];
 
 function addPlayer() {
   // Get input values
-  let playerName = document.getElementById("playerName").value;
+  let playerName = document.getElementById("playerFirstName").value + " " + document.getElementById("playerLastName").value;
   let playerPosition = document.getElementById("playerPosition").value;
+  let game = document.getElementById("text").value;
+  let points = parseInt(document.getElementById("points").value);
+  let assists = parseInt(document.getElementById("assists").value);
+  let rebounds = parseInt(document.getElementById("rebounds").value);
+  let blocks = parseInt(document.getElementById("blocks").value);
+  let steals = parseInt(document.getElementById("steals").value);
+  let freeThrows = parseInt(document.getElementById("freeThrows").value);
+  let twoPointers = parseInt(document.getElementById("twoPointers").value);
+  let threePointers = parseInt(document.getElementById("threePointers").value);
 
   // Validate input
-  if (!playerName || !playerPosition || game < 0 || points < 0 || assists < 0 || rebounds < 0 || blocks < 0 || steals < 0 || freeThrows < 0 || twoPointers < 0 || threePointers < 0) {
+  if (!playerName || 
+      !playerPosition || 
+      game < 0 || 
+      points < 0 || 
+      assists < 0 || 
+      rebounds < 0 || 
+      blocks < 0 || 
+      steals < 0 || 
+      freeThrows < 0 || 
+      twoPointers < 0 || 
+      threePointers < 0) {
     alert("Please enter valid input.");
     return;
   }
@@ -17,34 +34,20 @@ function addPlayer() {
   const player = {
     name: playerName,
     position: playerPosition,
-    points: 0,
-    assists: 0,
-    rebounds: 0,
-    blocks: 0,
-    steals: 0,
-    freeThrows: 0,
-    twoPointers: 0,
-    threePointers: 0
-    }
+    game: game,
+    points: points,
+    assists: assists,
+    rebounds: rebounds,
+    blocks: blocks,
+    steals: steals,
+    freeThrows: freeThrows,
+    twoPointers: twoPointers,
+    threePointers: threePointers
   };
 
   // Add player to the list
-  players.push(player);
-
-  // Update player list
-  updatePlayerList();
+  playerList.push(player);
 
   // Clear the form
-  document.getElementById("playerForm").reset();
-
-  function updatePlayerList() {
-    let playerList = document.getElementById("playerList");
-    playerList.innerHTML = ""; // Clear existing list
-
-    // Populate the player list
-    players.forEach(function(player) {
-      let listItem = document.createElement("li");
-      listItem.textContent = `${player.name} - ${player.position}`;
-      playerList.appendChild(listItem);
-    });
-  }
+  document.getElementById("playerform").reset();
+}

@@ -20,8 +20,14 @@
       <input type="text" id="playerLastName" required placeholder="Last Name">
     </div>
 
-    <label for="playerPosition">Position:</label>
-    <input type="text" id="playerPosition" required>
+    <form class="playerPosition">
+      <label for="playerPosition">Position:</label>
+      <label><input type="radio" id="pointGuard" name="playerPosition" value="Point guard">Point guard</label>
+      <label><input type="radio" id="shootingGuard" name="playerPosition" value="Shooting guard">Shooting guard</label>
+      <label><input type="radio" id="smallForward" name="playerPosition" value="Small forward">Small forward</label>
+      <label><input type="radio" id="powerForward" name="playerPosition" value="Power forward">Power forward</label>
+      <label><input type="radio" id="center" name="playerPosition" value="center">Center</label>
+    </form>
 
     <label for="statGame">Game:</label>
     <input type="text" id="text" required>
@@ -55,6 +61,43 @@
     </fieldset>
   </form>
 <hr>
+
+  <h2>Players</h2>
+
+  <table id="playerTable">
+    <thead>
+    <tr>
+      <th>Player Name</th>
+      <th>Position</th>
+      <th>Game</th>
+      <th>Points</th>
+      <th>Assists</th>
+      <th>Rebounds</th>
+      <th>Blocks</th>
+      <th>Steals</th>
+      <th>Free Throws</th>
+      <th>Two Pointers</th>
+      <th>Three Pointers</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tr>
+      <td id="playerName"></td>
+      <td id="playerPosition"></td>
+      <td id="statGame"></td>
+      <td id="points"></td>
+      <td id="assists"></td>
+      <td id="rebounds"></td>
+      <td id="blocks"></td>
+      <td id="steals"></td>
+      <td id="freeThrows"></td>
+      <td id="twoPointers"></td>
+      <td id="threePointers"></td>
+    </tr>
+  
+  </table>
+
   <script src="player.js"></script>
 </body>
 </html>

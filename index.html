@@ -7,68 +7,65 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>Team Tracker</h1>
+<div>
+  <h1>Stat Tracker</h1>
 
   <form>
     <fieldset  id="playerform">
       <legend>Add a Player</legend>
     
-    <div id = "name">
+    <div id = "playerName">
       <label for="playerName">Player Name:</label>
-      <input type="text" id="playerFirstName" required placeholder="First Name">
-      <input type="text" id="playerLastName" required placeholder="Last Name">
+      <input type="text" id="playerName" placeholder="Name">
     </div>
 
-    <form class="playerPosition">
-      <label for="playerPosition">Position:</label>
-      <label><input type="radio" id="pointGuard" name="playerPosition" value="Point guard">Point guard</label>
-      <label><input type="radio" id="shootingGuard" name="playerPosition" value="Shooting guard">Shooting guard</label>
-      <label><input type="radio" id="smallForward" name="playerPosition" value="Small forward">Small forward</label>
-      <label><input type="radio" id="powerForward" name="playerPosition" value="Power forward">Power forward</label>
-      <label><input type="radio" id="center" name="playerPosition" value="center">Center</label>
+    <form class="position">
+      <label for="position">Position:</label>
+      <label><input type="radio" id="position" value="Point guard">Point guard</label>
+      <label><input type="radio" id="position" value="Shooting guard">Shooting guard</label>
+      <label><input type="radio" id="position" value="Small forward">Small forward</label>
+      <label><input type="radio" id="position" value="Power forward">Power forward</label>
+      <label><input type="radio" id="position" value="center">Center</label>
     </form>
 
-    <label for="statGame">Game:</label>
-    <input type="number" id="text" required>
+    <label for="game">Game:</label>
+    <input type="number" id="game" >
 
     <label for="points">Points:</label>
-    <input type="number" id="points" required>
+    <input type="number" id="points" >
 
     <label for="assists">Assists:</label>
-    <input type="number" id="assists" required>
+    <input type="number" id="assists" >
 
     <label for="rebounds">Rebounds:</label>
-    <input type="number" id="rebounds" required>
+    <input type="number" id="rebounds" >
 
     <label for="blocks">Blocks:</label>
-    <input type="number" id="blocks" required>
+    <input type="number" id="blocks" >
 
     <label for="steals">Steals:</label>
-    <input type="number" id="steals" required>
+    <input type="number" id="steals" >
 
     <label for="freeThrows">Free Throws:</label>
-    <input type="number" id="freeThrows" required>
+    <input type="number" id="freeThrows" >
 
     <label for="freeThrowsMade">Free Throws Made:</label>
-    <input type="number" id="freeThrowsMade" required>
+    <input type="number" id="freeThrowsMade" >
 
     <label for="twoPointers">Two Pointers:</label>
-    <input type="number" id="twoPointers" required>
+    <input type="number" id="twoPointers" >
     
     <label for="threePointers">Three Pointers:</label>
-    <input type="number" id="threePointers" required>
+    <input type="number" id="threePointers" >
 
-    <button id="submit" onclick="addPlayer()">Add Player</button>
-    <p id="error-message"></p>
+    <button id="submit">Add Player</button>
     </fieldset>
   </form>
 <hr>
 
   <h2>Players</h2>
-
-  <table id="playerTable">
-    <thead>
+ <table>
+  <thead>
     <tr>
       <th>Name</th>
       <th>Position</th>
@@ -82,14 +79,16 @@
       <th>Free Throws Made</th>
       <th>Two Pointers</th>
       <th>Three Pointers</th>
-      <th>Actions</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
-    </thead>
-    
+  </thead>
+
     <tbody id = "output">
     <tbody>
+      
   </table>
-
-  <script src="player.js"></script>
+</div>
+  <script src="/script.js"></script>
 </body>
 </html>

@@ -30,33 +30,36 @@
     </form>
 
     <label for="statGame">Game:</label>
-    <input type="text" id="text" required>
+    <input type="number" id="text" required>
 
     <label for="points">Points:</label>
-    <input type="text" id="points" required>
+    <input type="number" id="points" required>
 
     <label for="assists">Assists:</label>
-    <input type="text" id="assists" required>
+    <input type="number" id="assists" required>
 
     <label for="rebounds">Rebounds:</label>
-    <input type="text" id="rebounds" required>
+    <input type="number" id="rebounds" required>
 
     <label for="blocks">Blocks:</label>
-    <input type="text" id="blocks" required>
+    <input type="number" id="blocks" required>
 
     <label for="steals">Steals:</label>
-    <input type="text" id="steals" required>
+    <input type="number" id="steals" required>
 
     <label for="freeThrows">Free Throws:</label>
-    <input type="text" id="freeThrows" required>
+    <input type="number" id="freeThrows" required>
+
+    <label for="freeThrowsMade">Free Throws Made:</label>
+    <input type="number" id="freeThrowsMade" required>
 
     <label for="twoPointers">Two Pointers:</label>
-    <input type="text" id="twoPointers" required>
+    <input type="number" id="twoPointers" required>
     
     <label for="threePointers">Three Pointers:</label>
-    <input type="text" id="threePointers" required>
+    <input type="number" id="threePointers" required>
 
-    <button type="button" onclick="addPlayer()">Add Player</button>
+    <button id="submit" onclick="addPlayer()">Add Player</button>
     <p id="error-message"></p>
     </fieldset>
   </form>
@@ -67,7 +70,7 @@
   <table id="playerTable">
     <thead>
     <tr>
-      <th>Player Name</th>
+      <th>Name</th>
       <th>Position</th>
       <th>Game</th>
       <th>Points</th>
@@ -76,26 +79,15 @@
       <th>Blocks</th>
       <th>Steals</th>
       <th>Free Throws</th>
+      <th>Free Throws Made</th>
       <th>Two Pointers</th>
       <th>Three Pointers</th>
       <th>Actions</th>
     </tr>
     </thead>
-
-    <tr>
-      <td id="playerName"></td>
-      <td id="playerPosition"></td>
-      <td id="statGame"></td>
-      <td id="points"></td>
-      <td id="assists"></td>
-      <td id="rebounds"></td>
-      <td id="blocks"></td>
-      <td id="steals"></td>
-      <td id="freeThrows"></td>
-      <td id="twoPointers"></td>
-      <td id="threePointers"></td>
-    </tr>
-  
+    
+    <tbody id = "output">
+    <tbody>
   </table>
 
   <script src="player.js"></script>

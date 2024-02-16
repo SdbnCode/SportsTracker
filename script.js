@@ -122,7 +122,7 @@ submitButton.addEventListener("click", ()=>{
   const pTwoPointers = pTwoPointersInput.value || null;
   const pThreePointers = pThreePointersInput.value || null;
 
-if(!pName === null || !pPosition === null || !pGame === null || !pPoints === null || !pAssists === null || !pRebounds === null || !pBlocks === null || !pSteals === null || !pFreeThrows === null || !pFreeThrowsMade === null || !pTwoPointers === null || !pThreePointers === null){
+if(pName === null || pPosition === null || pGame === null || pPoints === null || pAssists === null || pRebounds === null || pBlocks === null || pSteals === null || pFreeThrows === null || pFreeThrowsMade === null || pTwoPointers === null || pThreePointers === null){
   alert("Please enter all the fields.") 
     return
   } 
@@ -139,19 +139,6 @@ freeThrows = [pFreeThrows, ...freeThrows];
 freeThrowsMade = [pFreeThrowsMade, ...freeThrowsMade];
 twoPointers = [pTwoPointers, ...twoPointers];
 threePointers = [pThreePointers, ...threePointers];
-
-playerName.push(pName);
-position.push(pPosition);
-game.push(pGame);
-points.push(pPoints);
-assists.push(pAssists);
-rebounds.push(pRebounds);
-blocks.push(pBlocks);
-steals.push(pSteals);
-freeThrows.push(pFreeThrows);
-freeThrowsMade.push(pFreeThrowsMade);
-twoPointers.push(pTwoPointers);
-threePointers.push(pThreePointers);
   
  clearInput(); 
  addPlayer();

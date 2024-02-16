@@ -1,6 +1,71 @@
 const editIcon = `<i class="fas fa-edit"></i>` 
 const deleteIcon = `<i class="fas fa-trash"></i>` 
 
+
+  
+function deleteRow(i){ 
+  if(!confirm("Are you sure you want to delete this player?"))
+  return
+  playerName.splice(i, 1)
+  position.splice(i, 1)
+  game.splice(i, 1)
+  points.splice(i, 1)
+  assists.splice(i, 1)
+  rebounds.splice(i, 1)
+  blocks.splice(i, 1)
+  steals.splice(i, 1)
+  freeThrows.splice(i, 1)
+  freeThrowsMade.splice(i, 1)
+  twoPointers.splice(i, 1)
+  threePointers.splice(i, 1)
+  addPlayer()
+  LocalStorage()
+  setTimeout(fillTable, 100)
+}
+
+function activateEdit(i){
+  pNameInput.value = playerName[i]
+  pPositionInput.value = position[i]
+  pGameInput.value = game[i]
+  pPointsInput.value = points[i]
+  pAssistsInput.value = assists[i]
+  pReboundsInput.value = rebounds[i]
+  pBlocksInput.value = blocks[i]
+  pStealsInput.value = steals[i]
+  pFreeThrowsInput.value = freeThrows[i]
+  pFreeThrowsMadeInput.value = freeThrowsMade[i]
+  pTwoPointersInput.value = twoPointers[i]
+  pThreePointersInput.value = threePointers[i]
+  deleteRow(i)
+}
+
+function cancelEdit(){
+  clearInput()
+  editIndex = -1
+  submitButton.classList.remove("hide")
+  editSection.classList.add("hide")
+  }
+
+function editRow(){
+  if(editIndex == -1)
+  return
+  playerName[editIndex] = pNameInput.value
+  position[editIndex] = pPositionInput.value
+  game[editIndex] = pGameInput.value
+  points[editIndex] = pPointsInput.value
+  assists[editIndex] = pAssistsInput.value
+  rebounds[editIndex] = pReboundsInput.value
+  blocks[editIndex] = pBlocksInput.value
+  steals[editIndex] = pStealsInput.value
+  freeThrows[editIndex] = pFreeThrowsInput.value
+  freeThrowsMade[editIndex] = pFreeThrowsMadeInput.value
+  twoPointers[editIndex] = pTwoPointersInput.value
+  threePointers[editIndex] = pThreePointersInput.value
+  fillTable()
+  LocalStorage()
+  cancelEdit()
+}
+
 function clearInput() { 
   pNameInput.value = ""
   pPositionInput.checked = false

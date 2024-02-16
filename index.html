@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basketball Team Tracker</title>
+  <title>Basketball Team Stat Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div>
-  <h1>Stat Tracker</h1>
+  <h1>Basketball Team Stat Tracker</h1>
 
   <form>
     <fieldset  id="playerform">
@@ -27,37 +27,58 @@
       <label><input type="radio" id="position" value="Power forward">Power forward</label>
       <label><input type="radio" id="position" value="center">Center</label>
     </form>
+<div class="stats">
 
-    <label for="game">Game:</label>
-    <input type="number" id="game" >
+    <div>
+      <label for="game">Game:</label>
+      <input type="number" id="game">
+    </div>
 
-    <label for="points">Points:</label>
-    <input type="number" id="points" >
+    <div>
+      <label for="points">Points:</label>
+      <input type="number" id="points">
+    </div>
 
-    <label for="assists">Assists:</label>
-    <input type="number" id="assists" >
+    <div>
+      <label for="assists">Assists:</label>
+      <input type="number" id="assists">
+    </div>
 
-    <label for="rebounds">Rebounds:</label>
-    <input type="number" id="rebounds" >
+    <div>
+      <label for="rebounds">Rebounds:</label>
+      <input type="number" id="rebounds">
+    </div>
 
-    <label for="blocks">Blocks:</label>
-    <input type="number" id="blocks" >
+    <div>
+      <label for="blocks">Blocks:</label>
+      <input type="number" id="blocks">
+    </div>
 
-    <label for="steals">Steals:</label>
-    <input type="number" id="steals" >
+    <div>
+      <label for="steals">Steals:</label>
+      <input type="number" id="steals">
+    </div>
 
-    <label for="freeThrows">Free Throws:</label>
-    <input type="number" id="freeThrows" >
+    <div>
+      <label for="freeThrows">Free Throws:</label>
+      <input type="number" id="freeThrows">
+    </div>
 
-    <label for="freeThrowsMade">Free Throws Made:</label>
-    <input type="number" id="freeThrowsMade" >
+    <div>
+      <label for="freeThrowsMade">Free Throws Made:</label>
+      <input type="number" id="freeThrowsMade">
+    </div>
 
-    <label for="twoPointers">Two Pointers:</label>
-    <input type="number" id="twoPointers" >
-    
-    <label for="threePointers">Three Pointers:</label>
-    <input type="number" id="threePointers" >
+    <div>
+      <label for="twoPointers">Two Pointers:</label>
+      <input type="number" id="twoPointers">
+    </div>
 
+    <div>
+      <label for="threePointers">Three Pointers:</label>
+      <input type="number" id="threePointers">
+    </div>
+</div>
     <button id="submit">Add Player</button>
     <div id="editSection" class="hide"> 
       <button id="cancelEdit" onclick="cancelEdit()"> 

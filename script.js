@@ -1,8 +1,4 @@
-const editIcon = `<i class="fas fa-edit"></i>` 
-const deleteIcon = `<i class="fas fa-trash"></i>` 
 
-
-  
 function deleteRow(i){ 
   if(!confirm("Are you sure you want to delete this player?"))
   return
@@ -128,17 +124,16 @@ function addPlayer(){
         <td>${pTwoPointers}</td>
         <td>${pThreePointers}</td> 
         <td> 
-            <button onclick="activateEdit(${i})" class="edit">${editIcon}</button> 
-        </td> 
+        <button onclick="activateEdit(${i})" class="edit"><img src="image/edit.png" alt="Edit"></button>        </td> 
         <td> 
-            <button onclick="deleteRow(${i})" class="delete">${deleteIcon}</button> 
+        <button onclick="activateEdit(${i})" class="edit"><img src="image/garbage.png" alt="Edit"></button>        </td> 
         </td> 
     </tr>`         
   } 
   tbody.innerHTML = html; 
 } 
 
-// let editIndex = -1; 
+let editIndex = -1; 
 
 let playerName = JSON.parse(localStorage.getItem("playerName")) || [];
 let position = JSON.parse(localStorage.getItem("position")) || [];

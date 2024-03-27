@@ -1,8 +1,24 @@
+h1{
+    color: #333;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
 h3 {
     color: #333;
     font-size: 1.5em;
     margin: 0;
     padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
 }
 
 body {
@@ -61,6 +77,10 @@ label {
     gap: .5em;
 }
 
+#name input {
+    width: 98%;
+}
+
 .column {
     display: flex;
     flex-direction: column;
@@ -90,6 +110,10 @@ input[type="text"] {
     gap: .5em;
 }
 
+.player-stats input {
+    width: 95%;
+}
+
 .player-data{
     display: flex;
     flex-direction: row;
@@ -113,4 +137,16 @@ button{
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+
+.edit-button,
+.garbage-button{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
 }

@@ -164,14 +164,13 @@ button{
 
 .edit-button,
 .garbage-button{
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     vertical-align: bottom;
-
     gap: 1em;
     border: none;
     cursor: pointer;

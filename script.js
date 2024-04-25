@@ -1,6 +1,6 @@
 
 function deleteRow(i){ 
-  if(!confirm("Are you sure you want to delete this player?"))
+  if(!confirm("Are you sure you want to make these changes?"))
   return
   playerName.splice(i, 1)
   position.splice(i, 1)
@@ -16,7 +16,6 @@ function deleteRow(i){
   threePointers.splice(i, 1)
   addPlayer()
   LocalStorage()
-  setTimeout(fillTable, 100)
 }
 
 function activateEdit(i){
@@ -32,7 +31,7 @@ function activateEdit(i){
   pFreeThrowsMadeInput.value = freeThrowsMade[i]
   pTwoPointersInput.value = twoPointers[i]
   pThreePointersInput.value = threePointers[i]
-  
+  editIndex = i;
 }
 
 function cancelEdit(){
@@ -57,7 +56,7 @@ function editRow(){
   freeThrowsMade[editIndex] = pFreeThrowsMadeInput.value
   twoPointers[editIndex] = pTwoPointersInput.value
   threePointers[editIndex] = pThreePointersInput.value
-  fillTable()
+  addPlayer()
   LocalStorage()
   cancelEdit()
 }
@@ -163,11 +162,9 @@ const pTwoPointersInput = document.getElementById("twoPointers")
 const pThreePointersInput = document.getElementById("threePointers")
 
 const submitButton = document.getElementById("submit")
-// const editSection = document.getElementById("editSection")
 
 addPlayer()
 
-//DONE
 submitButton.addEventListener("click", ()=>{ 
   const pName = pNameInput.value || null;
   const pPosition = pPositionInput.value || null;

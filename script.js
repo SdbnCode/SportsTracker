@@ -32,7 +32,7 @@ function activateEdit(i){
   pFreeThrowsMadeInput.value = freeThrowsMade[i]
   pTwoPointersInput.value = twoPointers[i]
   pThreePointersInput.value = threePointers[i]
-  deleteRow(i)
+  
 }
 
 function cancelEdit(){
@@ -124,9 +124,9 @@ function addPlayer(){
         <td>${pTwoPointers}</td>
         <td>${pThreePointers}</td> 
         <td> 
-        <button onclick="activateEdit(${i})" class="edit-button"><img src="image/edit.png" alt="Edit"></button>        </td> 
+        <button onclick="activateEdit(${i})" class="edit-button"><img src="image/edit.png" alt="Edit"></button></td> 
         <td> 
-        <button onclick="activateEdit(${i})" class="garbage-button"><img src="image/garbage.png" alt="garbage"></button>        </td> 
+        <button onclick="deleteRow(${i})" class="garbage-button"><img src="image/garbage.png" alt="garbage"></button></td> 
         </td> 
     </tr>`         
   } 

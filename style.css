@@ -25,6 +25,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     background-color: #f4f4f4;
 }
 
@@ -37,6 +40,7 @@ form {
     flex-direction: column;
     gap: 1em;
 }
+
 
 #playerform{
     width:30%;
@@ -139,6 +143,24 @@ button{
     flex-direction: column;
 }
 
+/* CSS for table output */
+.player-table h2{
+    color: #333;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.player-table {
+    width: 80%;
+    margin: auto;
+    display: table;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+}
 
 .edit-button,
 .garbage-button{
@@ -148,5 +170,19 @@ button{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    vertical-align: bottom;
+
     gap: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+td {
+    padding: 0 20px 0 20px;
+    vertical-align: bottom;
+
+}
+
+th {
+    padding: 0 20px 0 20px;
 }
